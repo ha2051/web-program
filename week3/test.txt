@@ -1,0 +1,24 @@
+(*let rec member x xs =
+    match xs with
+    | [] -> false
+    | head :: tail -> x = head || member x tail*)
+
+(*let rec allSpec x xs = 
+      match xs with 
+      | [] -> true 
+      | head :: tail -> p head && allSpec p tail*)
+    
+    (*let  rec existsSpec p xs = 
+    match xs with  
+    | [] -> false
+    | head :: tail || existsSpec p tail;;*)
+1a
+let rec all p xs =    (*define recursive function*)
+      match xs with   (*pattern matching*)
+      | [] -> true     (*if list empty return true*)
+      | head :: tail -> p head && all p tail;;
+1b
+let rec exists p xs = 
+  match xs with 
+  | x -> []
+  |h::t ->
